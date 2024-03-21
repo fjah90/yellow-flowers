@@ -1,3 +1,55 @@
+body {
+    display: flex;
+    align-content: stretch;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cutting Corners';
+    background-color: #be5ec5;
+}
+
+
+@font-face {
+    font-family: 'Cutting Corners';
+    src: url('fonts/CuttingCorners.woff2') format('woff2'),
+        url('fonts/CuttingCorners.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+h1 {
+    text-align: center;
+    font-weight: normal;
+    font-style: normal;
+    color: #fae92d;
+    text-shadow:
+        -1px 0 black,
+        1px 0 black,
+        0 -1px black,
+        0 1px black;
+    text-transform: capitalize;
+    font-size: 3em;
+}
+
+.hero {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-content: space-around;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+div#frase {
+    font-size: 1rem;
+}
+
+div#autor {
+    font-size: 0.9rem;
+}
+
 .flower {
     height: 200px;
     width: 200px;
@@ -23,6 +75,9 @@
     background-size: 5px 5px;
 
     filter: drop-shadow(0 0 8px #682600);
+
+    position: relative;
+    left: 50px;
 }
 
 .Petal1 {
@@ -111,4 +166,38 @@
 
 .Petal3.p4 {
     transform: rotate(157.5deg);
+}
+
+.container {
+    position: absolute;
+    top: 25vh;
+    margin: 0 auto;
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.flower {
+    position: absolute;
+    top: 0%;
+    /* Start flower off-screen at the top */
+    width: 100px;
+    height: 100px;
+    animation: flower-animation 10s ease-in forwards;
+    top: calc(70vh - 100px);
+}
+
+@keyframes flower-animation {
+    0% {
+        top: 0;
+        opacity: 0;
+    }
+
+    50% {
+        top: calc(80% - 100px);
+        /* Position at bottom (minus flower height) */
+        opacity: 1;
+    }
 }
