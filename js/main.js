@@ -226,8 +226,8 @@ function cambiarFrase() {
     mostrarFrase(fraseAleatoria);
 }
 cambiarFrase(); // Mostramos una frase al cargar la página.
-// Invocamos la función "cambiarFrase" cada 5 segundos.
-setInterval(cambiarFrase, 5000);
+// Invocamos la función "cambiarFrase" cada 10 segundos.
+setInterval(cambiarFrase, 10000);
 
 
 const container = document.querySelector(".container");
