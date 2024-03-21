@@ -41,6 +41,7 @@ h1 {
     align-content: space-around;
     flex-wrap: wrap;
     align-items: flex-end;
+    max-width: 80%;
 }
 
 div#frase {
@@ -178,6 +179,7 @@ div#autor {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    max-width: 80%;
 }
 
 .flower {
